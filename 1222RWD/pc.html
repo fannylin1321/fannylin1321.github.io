@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .body {
+            margin: 0;
+        }
+
+        .nav_bar {
+            width: 1920px;
+            height: 1080px;
+            background-color: dimgrey;
+            position: absolute;
+
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        /* 設定範圍1920*1080，底色灰色 */
+        #containerL {
+            max-width: 20%;
+            height: 100%;
+            background-color: blanchedalmond;
+            float: left;
+            padding: 100px 90px;
+        }
+
+        /* 左邊區塊範圍設定 */
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .img {
+            padding: 25px 15px 25px 15px;
+        }
+
+        /* box1:logo圖片設定，多出來的不顯示 */
+        .box2 {
+            width: 200px;
+            height: 50px;
+            background-color: brown;
+            position: relative;
+            top: 50px;
+            padding: 8px 8px 8px 8px;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 50px;
+            background-color: cadetblue;
+            position: relative;
+            top: 100px;
+            padding: 8px 8px 8px 8px;
+        }
+
+        .box4 {
+            width: 200px;
+            height: 50px;
+            background-color: coral;
+            position: relative;
+            top: 150px;
+            padding: 8px 8px 8px 8px;
+        }
+
+        /* box2-4為下方連結列和定位設定 */
+        .mainbar {
+            color: white;
+            font-size: 24px;
+            font-family: "微軟正黑體";
+            padding: 50px 50px 50px 50px;
+        }
+
+        #containerR {
+            float: right;
+        }
+
+        .section1 {
+            width: 1540px;
+            height: 1080px;
+            background-color: darkolivegreen;
+            float: right;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 設定右邊大區塊：三個區塊水平垂直置中 */
+        .bigbox {
+            width: 1200px;
+            height: 600px;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 設定中間區塊並將內部box5-7做水平置中設定 */
+        .box5 {
+            width: 600px;
+            height: 600px;
+            background-color: yellow;
+            background-image: url('http://oldwww.hongya88.com.tw/archive/file/images/004.png');
+            background-repeat:no-repeat;
+            background-size:contain;
+            background-position:center;
+        }
+
+        .box6 {
+            width: 600px;
+            height: 600px;
+            background-color: violet;
+            background-image: url('');
+            background-repeat:no-repeat;
+            background-size:contain;
+            background-position:center;
+        }
+
+        .box7 {
+            width: 600px;
+            height: 600px;
+            background-color: whitesmoke;
+            background-image: url('');
+            background-repeat:no-repeat;
+            background-size:contain;
+            background-position:center;
+        }
+
+        /* .overlay {
+            width: 80%;
+            height: 50%;
+            margin: 0 auto;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.3);
+        } */
+        /* box5-7為下方連結列和定位設定 */
+    </style>
+</head>
+
+<body>
+    <div class="nav_bar">
+        <div id="containerL">
+            <div class="box1">
+                <div class="img">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="">
+                </div>
+            </div>
+            <div class="box2">
+                <a class="mainbar" href="box2">點主餐</a>
+            </div>
+            <div class="box3">
+                <a class="mainbar" href="box3">選點心</a>
+            </div>
+            <div class="box4">
+                <a class="mainbar" href="box4">選飲料</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div id="containerR">
+            <div class="section1">
+                <div class="bigbox">
+                    <div class="box5">
+                        <!-- <div class="overlay">
+                            <h1>漢堡</h1>
+                        </div>
+                        <img src="http://oldwww.hongya88.com.tw/archive/file/images/004.png" alt=""> -->
+                    </div>
+                    <div class="box6">
+                        <!-- <div class="overlay">
+                            <h1>點心</h1>
+                        </div>
+                        <img src="http://oldwww.hongya88.com.tw/archive/file/images/0966.png" alt=""> -->
+                    </div>
+                    <div class="box7">
+                        <!-- <div class="overlay">
+                            <h1>飲料</h1>
+                        </div>
+                        <img src="http://oldwww.hongya88.com.tw/archive/file/images/0305.png" alt=""> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
