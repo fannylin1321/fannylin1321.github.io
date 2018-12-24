@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            background-size:contain;
+            background-image: url("wavy-dots.png");
+        }
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+        .navbar1 {
+            height: 50px;
+            background-color:darkkhaki;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+        }
+        .leftbox1 {
+            float: left;
+        }
+        .rightbox1 {
+            float: right;
+        }
+        .clearbox{
+            clear:both;
+        }
+        .navbar-link{
+            font-size: 16px;
+            color:darkblue;
+            line-height: 50px;
+        }
+        i.fa-twitter{
+            font-size:30px;
+            color:black;
+            margin-left: 10px;
+
+        }
+        .search-box{
+            border-radius: 18px;
+        }
+        .section-img {
+            width:100%; 
+            height:500px;
+            overflow: hidden;
+            background-position:center;
+            background-size:cover;
+            background-image: url("flower.jpg");
+        }
+        .navbar2 {
+            height: 50px;
+            background-color:darkkhaki;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+               
+       
+        }
+        .text1{
+            position: absolute;
+            top:400px;
+            width: 100px;
+            height:100px;
+            background-color: yellow;
+            padding: 100px;
+            box-sizing:border-box;
+            background-size:cover;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-image: url('woman.jpg');
+            background-position:center;
+        }
+    
+        
+       .navbar2 .leftbox2{
+            float:left;
+            margin-left:200px;
+        }
+
+        .leftbox2 a{
+            font-size:16px;
+            font-family:"微軟正黑體";
+            float:left;
+            margin-right:40px;
+            text-align: center;
+        }
+        .text2{
+            display: block;
+             width:100px;
+             height:25px;
+             border:solid 0.5px cadetblue;
+             background-color:cadetblue;
+             float:right;
+             margin-top:5px;
+             text-align:center;
+             text-decoration: none;
+             border-radius: 18px;
+             line-height: 23px;
+        }
+        .navbar2 .rightbox2 .navbar-link:hover {
+            margin-left:50px;
+        }
+        .rightbox2.text2 a{
+            font-size:16px;
+            font-family:"time new roman";
+        }
+        .text_text2{
+            padding-top:8px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar1">
+        <div class="container">
+            <div class="leftbox1">
+                <a class="navbar-link" href="#">
+                    <i class="fab fa-twitter"></i>你好
+                </a>
+                <a class="navbar-link" href="#">about</a>
+            </div>
+            <!-- 設定左邊顯示區塊  -->
+            <div class="rightbox1">
+                <input class="search-box" type="text" placeholder="Search...">
+                <span class="navbar-link">已經擁有帳戶？ <b>登入</b></span>
+            </div>
+            <!-- 設定右邊顯示區塊 -->
+        </div>
+        <!-- 在container(容器)內編寫上方導覽列程式設定 -->
+    </nav>
+    <!-- 此程式碼為上方導覽列 -->
+
+    <div class="section-img">
+    </div>
+    <!-- 此程式碼為中間圖片 -->
+
+    <nav class="navbar2">
+        <div class="container">
+            <div class="text1"></div>
+            <div class="leftbox2">
+                <a href="#">推文<br><span>2.61萬</span></a>
+                <a href="#">正在跟隨<br><span>726</span></a>
+                <a href="#">跟隨者<br><span>28.9萬</span></a>
+                <a href="#">喜歡的內容<br><span>3964</span></a>
+            </div>
+            <div class="rightbox2">
+                <div class="text_text2"></div>
+                <a class="text2 href=" #>follow<br><span></span></a>
+            </div>
+        </div>
+<!-- navbar2下方的container包含一個左block和右block，左:設定4個tag，右:設定一個button -->
+        <div class="clear-fix"></div>
+        </div>
+        <!-- 清除navbar2浮動屬性 -->
+    </nav>
+    <!-- 此程式為下方導覽列 -->
+</body>
+
+</html>
