@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red_text {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="divA">this is <span class="red_text"> some</span> text!</div>
+
+    <script>
+        var myheading = document.querySelector('#divA');
+        console.log(myHeading);
+        console.log('innerHTML :' + myHeading.innerHTML);
+        console.log(`textContent: ${myHeading.textContent}`);
+        myHeading.innerHTML = `This is <span class="red_text">BIG</span>text!`;
+    </script>
+</body>
+
+</html>

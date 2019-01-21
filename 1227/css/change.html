@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <img id="img1" src="http://static.stheadline.com/stheadline/inewsmedia/20180902/_2018090216460868763.jpeg" ,alt="">
+    <!-- 圖片外部連結，使用img連結方式 -->
+    <script>
+        let img1_src;
+        const girL1_img_src = "../img/01.jpeg";
+        const girL2_img_src = "../img/02.jpg";
+        const AAimg = document.querySelector('#img1');
+
+        AAimg.onclick = function () {
+            img1_src = AAimg.getAttribute('src')
+            if (img1_src == girL1_img_src) {
+                AAimg .setAttribute("src", girL2_img_src);
+            }else{
+                AAimg .setAttribute("src", girL1_img_src);
+            }
+        }
+    </script>
+</body>
+
+</html>

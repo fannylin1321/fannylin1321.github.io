@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="score" type="number" min="0" max="100">
+    <button id="btn">go</button>
+    <h1 id="rank"></h1>
+    <!--1.設定input id為"score",屬性為"數字"，範圍："0"-"100" 
+    2.設定button id為"btn"
+    3.設定h1標題id為"rank"-->
+    <script>
+        let score;
+        const input_score = document.querySelector("#score")
+        const btn = document.querySelector("#btn")
+        const h1_rank = document.querySelector("#rank")
+        // 1.宣告 score;(因數字會變，先不給予數值)
+        // 2.宣告 input_score = document.querySelector("#score")
+        // (宣告從input抽取到的資料來源名稱為#score)
+        // 3.宣告btn = document.querySelector("#btn")
+        // (宣告從btn按下的資料來源名稱為#btn)
+        // 4.宣告h1_rank = document.querySelector("#rank")
+        // (宣告從h1顯示等級結果的資料來源名稱為#rank)
+        btn.onclick = function () {
+            score = input_score.value;
+            // score的資料來源為input輸入的數值
+            
+            if (score >= 90 && score <= 100) {
+                h1_rank.innerHTML = "甲";
+            } else if (score >= 80 && score <= 89) {
+                h1_rank.innerHTML = "乙";
+            } else if (score >= 70 && score <= 79) {
+                h1_rank.innerHTML = "丙";
+            } else if (score >= 60 && score <= 69) {
+                h1_rank.innerHTML = "丁";
+            } else if (score >= 0 && score <= 59) {
+                h1_rank.innerHTML = "不及格，下次再加油";
+            }
+        }
+        // 區間判斷
+        // 如果輸入的數值區間落在90-100之間，顯示為"甲"
+        // 如果輸入的數值區間落在80-89之間，顯示為"乙"
+        // 如果輸入的數值區間落在70-79之間，顯示為"丙"
+        // 如果輸入的數值區間落在60-69之間，顯示為"丁"
+        // 如果輸入的數值區間落在<60，顯示為"不及格，下次再加油"
+    </script>
+</body>
+
+</html>

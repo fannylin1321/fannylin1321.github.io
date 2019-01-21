@@ -233,7 +233,8 @@
         background-color: oldlace;
 
     }
-/* 區塊5：背景色：灰，超出範圍使用hidden;container區域:紅色、設定左右方塊各一，使用float，嵌入影片方式呈現 */
+
+    /* 區塊5：背景色：灰，超出範圍使用hidden;container區域:紅色、設定左右方塊各一，使用float，嵌入影片方式呈現 */
     footer {
         font-size: 12px;
         background-color: #333;
@@ -241,7 +242,17 @@
         padding: 8px 0;
         text-align: center;
     }
-/* 最底部footer設定 */
+
+    /* 最底部footer設定 */
+    #back_top {
+        font-size: 18px;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: darkgray;
+        color: whitesmoke;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+    }
 </style>
 
 <body>
@@ -255,7 +266,7 @@
             </h1>
         </div>
     </section>
-<!-- 背景圖片左邊黑色方塊標題 -->
+    <!-- 背景圖片左邊黑色方塊標題 -->
     <nav id="main_nav">
         <div class="container">
             <a class="nav_bar" href="#section_1">心靈起點</a>
@@ -265,7 +276,7 @@
         </div>
         <div class="clearfix"></div>
     </nav>
-<!-- 下方navbar連結 -->
+    <!-- 下方navbar連結 -->
     <section id="section_1">
         <div class="overlay">
             <h1>聆聽你心中的聲音<br>
@@ -273,7 +284,7 @@
             </h1>
         </div>
     </section>
-<!-- 滿版圖片parallex效果標題文字 -->
+    <!-- 滿版圖片parallex效果標題文字 -->
     <section id="section_2">
         <div class="container">
             <div class="h1">
@@ -292,7 +303,7 @@
             <div class="clearfix"></div>
         </div>
     </section>
-<!-- 主角介紹：女 -->
+    <!-- 主角介紹：女 -->
     <section id="section_3">
         <div class="container">
             <div class="leftbox">
@@ -308,7 +319,7 @@
             </div>
             <div class="clearfix"></div>
     </section>
-<!-- 主角介紹：男 -->
+    <!-- 主角介紹：男 -->
     <section id="section_4">
         <div class="container">
             <div class="h2">
@@ -343,19 +354,31 @@
                     frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="boxr">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/5ZWas5Y0L20" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/5ZWas5Y0L20" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="clearfix"></div>
         </div>
     </section>
-<!-- 外部嵌入影片，左右各一 -->
+    <!-- 外部嵌入影片，左右各一 -->
     <footer>
         <div class="container">
             Copyright © 2018 HanksOAO Inc. 保留一切權利。
         </div>
     </footer>
-<!-- 最下方footer文字設定 -->
+    <!-- 最下方footer文字設定 -->
+    <div id="back_top">
+        BackTop
+    </div>
+    <script>
+        let back_top;
+        back_top = document.querySelector("#back_top");
+        back_top.onclick = function () {
+            let scrollTop = document.documentElement.scrollTop;
+            document.documentElement.scrollTop = 10;
+        }
+    </script>
+
 </body>
 
 </html>
